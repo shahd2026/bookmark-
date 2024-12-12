@@ -23,29 +23,31 @@
         <div class="item pt-5">
             <h2 class=" h5 text-center py-5">Bookmark your favourite sites</h2>
         </div>
-        <div class="item w-75 m-auto ">
+        <div class="item w-75 m-auto">
             <div class="mb-3">
                 <i class="fa-regular fa-clipboard fa-lg" style="color: rgba(190, 66, 70, 0.904)"></i>
                 <label for="siteName" class="form-label fw-bold">Site Name</label>
-                <input oninput="validateAll(this)" type="text" class="form-control " id="siteName" placeholder="Enter site name">
+                <input oninput="validateAll(this)" type="text" class="form-control" id="siteName" placeholder="Enter site name">
+                <div class="alert alert-danger d-none">
+                    Name must contain at least 3 characters.
+                </div>
             </div>
-            <div class="alert alert-danger d-none">
-                Name must contain at least 3 characters
-            </div>
+        
             <div class="mb-3">
                 <i class="fa-solid fa-link fa-lg" style="color: rgba(190, 66, 70, 0.904)"></i>
-                <label for="URL" class="form-label fw-bold">Site URL</label>
-                <input oninput="validateAll(this)"
-                type="text" class="form-control" id="Url" placeholder="web site URL">
+                <label for="Url" class="form-label fw-bold">Site URL</label>
+                <input oninput="validateAll(this)" type="text" class="form-control" id="Url" placeholder="Enter site URL">
+                <div class="alert alert-danger d-none">
+                    Please enter a valid URL.
+                </div>
             </div>
-            <div class="alert alert-danger d-none ">
-                please enter a valid Url
-            </div>
+        
             <div class="button text-center my-4">
                 <button onclick="submit()" class="btn btn-custom mx-auto">Submit</button>
             </div>
-
         </div>
+        
+        
                 
        <div class="container">
         <div class="row my-1">

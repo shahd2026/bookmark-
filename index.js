@@ -92,19 +92,21 @@ localStorage.setItem("newLink", JSON.stringify(linksInfo));
 
 function validateAll(element){
     var regex = {
-        siteName :  /^[\w.*]+$/ ,
+        siteName :  /^[\w.*]{3,}$/ ,
         Url: /^(https?:\/\/)?[\w.-]+\.[a-z]{2,6}(\/[\w.-]*)*(\/?)$/ ,
     };
     if (regex[element.id].test(element.value)==true){
         element.classList.add("is-valid")
         element.classList.remove("is-invalid")
+        element.nextElementSibling.classList.add("d-none")
+
     }
-    if (regex[element.id].test(element.value)==false){
+   else{
         element.classList.remove("is-valid")
         element.classList.add("is-invalid")
         element.nextElementSibling.classList.remove("d-none")
 
 
 
-    }
+    };
 }
